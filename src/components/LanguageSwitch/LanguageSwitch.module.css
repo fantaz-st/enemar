@@ -1,0 +1,80 @@
+.control {
+  min-width: 80px;
+}
+
+.select {
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 6px 18px rgba(17, 34, 56, 0.04);
+  backdrop-filter: blur(8px);
+  border-radius: 0 !important;
+}
+
+.small {
+  height: 40px;
+}
+
+.medium {
+  height: 44px;
+}
+
+.select :global(.MuiOutlinedInput-notchedOutline) {
+  border-radius: 0 !important;
+  border-color: rgba(22, 50, 74, 0.08);
+}
+
+.select:hover :global(.MuiOutlinedInput-notchedOutline) {
+  border-color: rgba(22, 50, 74, 0.18);
+}
+
+.select:global(.Mui-focused) :global(.MuiOutlinedInput-notchedOutline) {
+  border-color: rgba(18, 59, 99, 1);
+  border-width: 1px;
+}
+
+.select :global(.MuiSelect-select) {
+  display: flex;
+  align-items: center;
+  min-height: unset;
+  padding: 0 36px 0 12px !important;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.select :global(.MuiSelect-icon) {
+  right: 10px;
+}
+
+/* DROPDOWN */
+
+.menuPaper {
+  margin-top: 8px;
+  border-radius: 0 !important;
+  border: 1px solid rgba(22, 50, 74, 0.08) !important;
+  box-shadow: 0 14px 36px rgba(17, 34, 56, 0.08) !important;
+  overflow: hidden;
+}
+
+.menuList {
+  padding: 4px !important;
+}
+
+.menuItem {
+  min-height: 42px !important;
+  border-radius: 0 !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+}
+
+.menuItem:hover {
+  background: rgba(0, 0, 0, 0.04) !important;
+}
+
+.menuItem:global(.Mui-selected) {
+  background: rgba(18, 59, 99, 0.08) !important;
+}
+
+.menuItem:global(.Mui-selected:hover) {
+  background: rgba(18, 59, 99, 0.12) !important;
+}

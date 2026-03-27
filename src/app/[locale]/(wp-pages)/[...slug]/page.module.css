@@ -1,0 +1,173 @@
+.article {
+  padding-top: calc(var(--header-h, 72px) + 40px);
+  padding-bottom: 84px;
+}
+
+.container {
+  position: relative;
+}
+
+.header {
+  margin: 0 auto 1.5rem;
+  max-width: 980px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.crumbRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sep {
+  opacity: 0.45;
+}
+
+.crumb {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.crumb:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.crumbCurrent {
+  font-weight: 600;
+}
+
+.homeIcon {
+  font-size: 1.05rem !important;
+  vertical-align: middle;
+}
+
+.title {
+  max-width: 14ch;
+  margin: 0;
+}
+
+.meta {
+  margin-top: 0.9rem;
+}
+
+.heroMedia {
+  position: relative;
+  width: 100%;
+  height: clamp(240px, 36vw, 520px);
+  margin: 2rem auto 2.25rem;
+  overflow: hidden;
+  border-radius: 0;
+  border: 1px solid rgba(22, 50, 74, 0.08);
+  box-shadow: 0 14px 40px rgba(16, 37, 58, 0.07);
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.content {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.subpages {
+  width: 100%;
+  max-width: 980px;
+  margin: 3.5rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(22, 50, 74, 0.08);
+}
+
+.subpagesTitle {
+  margin-bottom: 1rem;
+}
+
+.subpageLink {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.subpageCard {
+  position: relative;
+  height: 100%;
+  border-radius: 0 !important;
+  overflow: hidden;
+}
+
+.subpageContent {
+  position: relative;
+  padding: 1.25rem 1.3rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.topLine {
+  position: absolute;
+  top: 0;
+  left: 1.3rem;
+  right: 1.3rem;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(15, 124, 130, 0.9), rgba(62, 140, 184, 0.55), rgba(149, 191, 122, 0.7));
+}
+
+.subpageText {
+  min-width: 0;
+}
+
+.subpageArrow {
+  flex: 0 0 auto;
+  transition: transform 0.2s ease;
+}
+
+.subpageCard:hover .subpageArrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+  .article {
+    padding-top: calc(var(--header-h, 72px) + 28px);
+    padding-bottom: 64px;
+  }
+
+  .header {
+    margin-bottom: 1.25rem;
+  }
+
+  .title {
+    max-width: 100%;
+  }
+
+  .heroMedia {
+    margin: 1.5rem auto 2rem;
+  }
+
+  .subpages {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .subpageContent {
+    padding: 1.1rem 1.1rem !important;
+  }
+
+  .topLine {
+    left: 1.1rem;
+    right: 1.1rem;
+  }
+}

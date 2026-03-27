@@ -1,0 +1,145 @@
+.wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  padding-top: clamp(5rem, 8vw, 8rem);
+  padding-bottom: clamp(5rem, 8vw, 8rem);
+}
+
+.head {
+  max-width: 860px;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+}
+
+.lead {
+  max-width: 68ch;
+  margin: 0 auto;
+}
+
+.cardLink {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+}
+
+.cardContent {
+  position: relative;
+  height: 100%;
+  padding: 1.5rem !important;
+  overflow: hidden;
+}
+
+.cardStack {
+  height: 100%;
+}
+
+.topLine {
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(15, 124, 130, 0.9), rgba(62, 140, 184, 0.55), rgba(149, 191, 122, 0.7));
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.iconWrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(15, 124, 130, 0.05);
+  border: 1px solid rgba(22, 50, 74, 0.08);
+  flex: 0 0 auto;
+}
+
+.iconWrap :global(svg) {
+  font-size: 1.6rem;
+  color: inherit;
+}
+
+.cardBody {
+  flex: 1;
+}
+
+.cardBottom {
+  padding-top: 0.5rem;
+}
+
+.more {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover .more {
+  transform: translateX(4px);
+}
+
+.bgLines {
+  position: absolute;
+  inset: auto -10% 10% 35%;
+  height: 220px;
+  opacity: 0.22;
+  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg width='1400' height='220' viewBox='0 0 1400 220' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 108C108 108 108 78 216 78C324 78 324 116 432 116C540 116 540 84 648 84C756 84 756 126 864 126C972 126 972 94 1080 94C1188 94 1188 130 1296 130C1340 130 1376 122 1400 118' stroke='%2367B7EA' stroke-width='3'/%3E%3Cpath d='M0 126C108 126 108 99 216 99C324 99 324 137 432 137C540 137 540 108 648 108C756 108 756 145 864 145C972 145 972 116 1080 116C1188 116 1188 149 1296 149C1340 149 1376 142 1400 139' stroke='%2336A2B3' stroke-width='2.5'/%3E%3Cpath d='M0 144C108 144 108 120 216 120C324 120 324 156 432 156C540 156 540 128 648 128C756 128 756 164 864 164C972 164 972 138 1080 138C1188 138 1188 169 1296 169C1340 169 1376 164 1400 160' stroke='%2395BF7A' stroke-width='2.5'/%3E%3C/svg%3E")
+    left center / cover no-repeat;
+}
+
+@media (max-width: 899px) {
+  .head {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .lead {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .cardContent {
+    padding: 1.25rem !important;
+  }
+
+  .bgLines {
+    inset: auto -35% 6% 20%;
+    opacity: 0.18;
+  }
+}
+
+@media (max-width: 599px) {
+  .topLine {
+    left: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .iconWrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 0;
+  }
+
+  .iconWrap :global(svg) {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,25 @@
+import classes from "./Header.module.css";
+import { Typography } from "@mui/material";
+import Image from "next/image";
+import Link from "next/link";
+
+const HeaderLogo = ({ locale = "hr", siteName = "EnEMar", logo = false, onClick }) => {
+  const homeHref = locale === "hr" ? "/hr" : "/en";
+  const logoSrc = locale === "hr" ? "/LOGO hrvatski-horizontal.svg" : "/LOGO engleski-horizontal.svg";
+
+  return (
+    <Link href={homeHref} className={classes.logoLink} onClick={onClick} aria-label={siteName}>
+      {logo ? (
+        <div className={classes.logoMedia}>
+          <Image src={logoSrc} fill alt={siteName} className={classes.logoImage} sizes="(max-width: 600px) 120px, 180px" loading="eager" />
+        </div>
+      ) : (
+        <Typography variant="brand" color="primary.main" component="span">
+          {siteName}
+        </Typography>
+      )}
+    </Link>
+  );
+};
+
+export default HeaderLogo;
