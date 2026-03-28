@@ -5,8 +5,10 @@ export async function wpFetch(query, variables = {}) {
     body: JSON.stringify({ query, variables }),
     next: { revalidate: 300 },
   });
+
   const j = await r.json();
+
   if (j.errors) throw new Error(j.errors[0]?.message || "WPGraphQL error");
-  // console.log(j.data);
+
   return j.data;
 }

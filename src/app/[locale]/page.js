@@ -1,15 +1,17 @@
 import Hero from "@/sections/Hero/Hero";
 import HomeAbout from "@/sections/HomeAbout/HomeAbout";
 import HomeNews from "@/sections/HomeNews/HomeNews";
-import { ALL_NEWS } from "@/lib/queries";
+import { LATEST_POSTS } from "@/lib/queries";
 import { wpFetch } from "@/lib/wpFetch";
 import { wpLangFromLocale } from "@/lib/lang";
 import HomeWorkPackages from "@/sections/HomeWorkPackages/HomeWorkPackages";
 
+export const revalidate = 300;
+
 export default async function Page({ params }) {
   const { locale } = await params;
 
-  const data = await wpFetch(ALL_NEWS, {
+  const data = await wpFetch(LATEST_POSTS, {
     lang: wpLangFromLocale(locale),
     first: 6,
     order: "DESC",
