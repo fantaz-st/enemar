@@ -8,14 +8,28 @@ const content = {
   hr: {
     overline: "Istraživački projekt",
     title: "ENEMAR",
-    subtitle: "Energetska učinkovitost i smanjenje emisija štetnih plinova u pomorskom prometu primjenom integriranih tehničkih i operativnih mjera",
-    text: "Projekt istražuje tehnološke i operativne mjere za povećanje energetske učinkovitosti i smanjenje emisija u pomorskom prometu, u skladu s najnov...",
+    subtitle: "Energetska učinkovitost i smanjenje emisija štetnih plinova u pomorskom prometu",
+    text: "Projekt EnEMar istražuje i uspoređuje tehnološke i operativne mjere koje doprinose dekarbonizaciji pomorskog prometa, s naglaskom na energetsku učinkovitost brodova, modeliranje mjera i razvoj smjernica za donošenje odluka u brodarskoj praksi.",
     cta1: { href: "/hr/o-projektu", label: "O projektu" },
     meta: [
       { label: "Trajanje", value: "2025 — 2029" },
       { label: "Trajanje (mjeseci)", value: "48" },
       { label: "Fokus", value: "Energetska učinkovitost, Emisije, Modeliranje" },
       { label: "Regulative", value: "IMO 2023, EU ETS, FuelEU Maritime" },
+    ],
+  },
+
+  en: {
+    overline: "Research project",
+    title: "ENEMAR",
+    subtitle: "Energy efficiency and reduction of harmful gas emissions in maritime transport",
+    text: "The EnEMar project explores and compares technological and operational measures that contribute to the decarbonization of maritime transport, with a focus on ship energy efficiency, measure modelling, and the development of decision-making guidelines for shipping practice.",
+    cta1: { href: "/en/about-project", label: "About the project" },
+    meta: [
+      { label: "Duration", value: "2025 — 2029" },
+      { label: "Duration (months)", value: "48" },
+      { label: "Focus", value: "Energy Efficiency, Emissions, Modelling" },
+      { label: "Regulations", value: "IMO 2023, EU ETS, FuelEU Maritime" },
     ],
   },
 };
